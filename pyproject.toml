@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "sse-fastapi-app"
+version = "0.1.0"
+description = "A barebones SSE server for communicating with the Client Portal."
+authors = ["Heshie <4hbrody@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.111.0"
+uvicorn = "^0.30.1"
+sse-starlette = "^2.1.0"
+python-dotenv = "^1.0.1"
+python-jose = "^3.3.0"
+requests = "^2.32.3"
+pyjwt = "^2.8.0"
+loguru = "^0.7.2"
+cryptography = "^42.0.8"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "run_uvicorn"
